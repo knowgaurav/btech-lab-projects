@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student [
+<!ELEMENT student (name, semester, section, rollnum, body)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT semester (#PCDATA)>
+<!ELEMENT section (#PCDATA)>
+<!ELEMENT rollnum (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!-- <!ATTLIST name gender NMTOKEN "N\A" #REQUIRED> -->
+<!-- <!ENTITY college "Amity University"> -->
+]>

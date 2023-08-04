@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSD Lab 3 - 19/1/22</title>
+    <style>
+        body div {
+            margin: 20px 0;
+        }
+
+        div div {
+            margin: 0;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        .obj input {
+            margin-left: auto;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        function varInit() {
+            let var1 = document.getElementById("var").value;
+            var output = "Variable Data = " + var1;
+            document.getElementById("varop").innerHTML = output;
+            console.log(var1);
+        }
+
+        function arrInit() {
+            var arr = [];
+            var checks = document.querySelectorAll('input[type=checkbox]:checked');
+
+            for (let i = 0; i < checks.length; i++) {
+                arr.push(checks[i].value);
+            }
+
+            var op = "Selected items are: " + arr;
+            document.getElementById("varop2").innerHTML = op;
+
+            console.log(arr);
+        }
+
+        function remDup() {
+            let str = document.getElementById("str").value;
+            const words = str.split(" ")
+            const set = new Set(words);
+
+            const org = "Orginal String: " + str;
+            let op = "Unique Words in the string are: ";
+            for (let item of set)
+                op += item + ", ";
+
+            document.getElementById("varop3").innerHTML = org;
+            document.getElementById("varop4").innerHTML = op;
+            console.log(set);
+        }
+
+        function createObj(i, n) {
+            return {
+                id: i,
+                name: n,
+                college: "ASET, Noida"
+            };
+        }
+
+        function printObj() {
+            const name = document.getElementById("rnum").value;
+            const rollnum = document.getElementById("name").value;
+            let stu = new createObj(rollnum, name);
+
+            let op = "Student Details are: " + stu.id + ", " + stu.name + ", " + stu.college;
+            document.getElementById("varop5").innerHTML = op;
+
+            console.log(stu.id);
+            console.log(stu.name);
+            console.log(stu.college);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label for="var">Enter the variable data: </label>
+        <input type="text" name="data" id="var" value="10" required>
+        <button onclick="varInit()">Submit</button>
+    </div>
+
+
+    <div>
+        <label for="check">Select Courses: </label>
+        <div>
+            <label for="">C</label>
+            <input type="checkbox" name="" id="check" value="C">
+            <label for="">C++</label>
+            <input type="checkbox" name="" id="check" value="C++">
+            <label for="">Java</label>
+            <input type="checkbox" name="" id="check" value="Java">
+        </div>
+        <button onclick="arrInit()">Submit</button>
+    </div>
+
+    <div>
+        <label>Enter a string: </label>
+        <input type="text" id="str">
+        <button onclick="remDup()">Submit</button>
+    </div>
+
+    <div>
+        <label>Enter student details: </label>
+        <br>
+        <div class="obj">
+            <label>Name: </label>
+            <input type="text" id="name">
+            <br>
+            <label>Roll Num: </label>
+            <input type="number" id="rnum">
+            <br>
+        </div>
+        <button onclick="printObj()">Submit</button>
+    </div>
+
+
+    <div>
+        <h2>Results =</h2>
+        <p id="varop"></p>
+        <p id="varop2"></p>
+        <p id="varop3"></p>
+        <p id="varop4"></p>
+        <p id="varop5"></p>
+    </div>
+</body>
+
+</html>

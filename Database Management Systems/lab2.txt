@@ -1,0 +1,16 @@
+CREATE TABLE g_MEMBER(Mem_id NOT NULL, Mem_Name, Address, Contact_num);
+Create table g_book(book_id NUMBER(10), book_name varchar(30), book_type varchar(20));
+update g_member set address = 'Faridabad' where member_name = 'Gaurav';
+insert into g_member values(104, 'Siddhant', 7827381921, 'Noida');
+
+alter table g_book
+add book_price number(3);
+
+create table g_issue(mem_id number(10) Not Null, book_name Char(20), issue_date date, return_date date);
+
+insert into g_issue values(105, '03-MAR-20', '11-MAR-20', 5); 
+
+select book_id from g_book
+where book_price > 499
+intersect
+select mem_id from g_issue

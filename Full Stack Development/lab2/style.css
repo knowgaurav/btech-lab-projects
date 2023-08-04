@@ -1,0 +1,42 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family:'Courier New', Courier, monospace , sans-serif;
+}
+.section{
+	width: 100%;
+	min-height: 100vh;
+	background-color: #00509d;
+}
+.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 200px;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+}
+
+.content{
+    color: #fff;
+}
+
+.button{
+	margin-top: 30px;
+}
+
+input{
+	background-color: #ffd500;
+	padding:12px 40px;
+	color:#00509d;
+	font-size: 25px;
+    font-weight: bold;
+    border: 0;
+}

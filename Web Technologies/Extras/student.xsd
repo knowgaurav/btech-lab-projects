@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="./"    
+    xmlsns="./"   
+    elementFormDefault="qualified" 
+>
+
+    <xs:simpletype name="semesterType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-8][A-Z][A-Z][A-Z]"/>
+        </xs:restriction>
+    </xs:simpletype>
+
+    <xs:simpletype name="sectionType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-10][XY]"/>
+        </xs:restriction>
+    </xs:simpletype>
+
+    <xs:simpletype name="collegeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ASET"/>
+            <xs:enumeration value="AIP"/>
+            <xs:enumeration value="ALS"/>
+            <xs:enumeration value="ASAP"/>
+        </xs:restriction>
+    </xs:simpletype>
+
+    <xs:complextype name="studentType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="semester" type="semesterType"/>
+            <xs:element name="section" type="sectionType"/>
+            <xs:element name="rollnum" type="xs:integer"/>
+            <xs:element name="body" type="xs:string"/>
+            <xs:element name="college" type="collegeType"/>
+        </xs:sequence>
+    </xs:complextype>
+
+    <xs:element name="student" type="studentType"/>
+</xs:schema>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - 02/02/22</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-1").click(function () {
+                $('div').hide();
+            });
+
+            $("#btn-2").click(function () {
+                $('div').show();
+            });
+
+            $("#btn-3").click(function () {
+                $('div').toggle();
+            });
+
+            $("#box").mouseenter(function () {
+                $("#box").css("background-color", "lightgreen");
+            });
+            $("#box").mouseleave(function () {
+                $("#box").css("background-color", "teal");
+            });
+
+            $("#text").on(
+                "click", function () {
+                    $("#text").toggleClass("pink");
+                });
+
+            $("#add_c").click(function () {
+                var data = "<tr><td>" + $("#course").val() + "</td></tr>";
+                console.log(data);
+                $("#course_table").append(data);
+            });
+
+            $("#btn-4").click(function () {
+                $("#box").animate({
+                    opacity: 0.50,
+                    left: "+=50"
+                });
+            });
+
+            $("#btn-5").click(function () {
+                $("#box").animate({
+                    opacity: 1,
+                    left: "-=50"
+                });
+            });
+        });  
+    </script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+
+        .pink {
+            color: rgb(219, 51, 79);
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="btn-1">Hide</button>
+    <button id="btn-2">Show</button>
+    <button id="btn-3">Toggle</button>
+    <button id="btn-4">Move Left</button>
+    <button id="btn-5">Move Right</button>
+    <br><br>
+    <div id="box" style="width: 200px; height: 200px; background-color: teal; position: relative;"></div>
+    <br><br>
+    <p id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga inventore officiis blanditiis veniam
+        molestiae
+        saepe. Eaque, illo. Architecto consectetur optio magni iste repudiandae, eos ab atque quam facere tempora
+        eligendi.
+        Repellendus aliquid cupiditate odio distinctio, debitis eligendi provident quisquam officia exercitationem
+        consequuntur aliquam delectus adipisci veritatis, maxime deserunt modi, veniam optio esse? Nostrum ut minima</p>
+
+    <br><br>
+    <input type="text" name="course" id="course">
+    <button id="add_c">Add Courses</button>
+    <br><br>
+    <table id="course_table">
+        <thead>
+            <tr>
+                <td>Courses</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form - 19/1/22</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: lightblue;
+        }
+
+        form div {
+            margin: 20px 0;
+        }
+
+        div div {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <form action="">
+        <div>
+            <label>First Name:</label>
+            <input type="text" placeholder="Gaurav">
+        </div>
+        <div>
+            <label>Middle Name:</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <input type="text" placeholder="Singh">
+        </div>
+        <div>
+            <label for="">Course</label>
+            <select name="languages" id="lang" placeholder="Course">
+                <option value="course">Course</option>
+                <option value="btech">B.Tech</option>
+                <option value="bba">BBA</option>
+                <option value="ba">BA</option>
+                <option value="ballb">BA LLB</option>
+                <option value="bcom">B.Com</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Gender</label>
+            <div>
+                <input type="radio" name="gender" id="">
+                <label for="">Male</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="">
+                <label for="">Female</label>
+            </div>
+            <div> <input type="radio" name="gender" id="">
+                <label for="">Other</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="">Phone</label>
+            <input type="text" name="country code" value="+91" size="2" />
+            <input type="number" name="" id="">
+        </div>
+
+        <div>
+            <label for="">Address</label>
+            <br>
+            <textarea cols="80" rows="5" value="address"></textarea>
+        </div>
+
+        <div>
+            <label for="">E-mail</label>
+            <input type="email" name="" id="" placeholder="gaurav@email.com">
+        </div>
+
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="" id="" placeholder="$trongPa$$">
+        </div>
+
+        <div>
+            <label for="">Re-Password</label>
+            <input type="password" name="" id="" placeholder="$trongPa$$">
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

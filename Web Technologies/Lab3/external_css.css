@@ -1,0 +1,38 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+    background-color: #00509d;
+    width: fit-content;
+    color: #ffd500;
+    padding: 5px 10px;
+    box-shadow: 3px 5px black;
+}
+
+p{
+    color: #00509d;
+}
+
+.button{
+    margin-top: 25px;
+}
+
+a{
+    text-decoration: none;
+	background-color: #ffd500;
+	padding:12px 10px;
+	color:#00509d;
+	font-size: 15px;
+    font-weight: bold;
+    border: 0;
+}
+
+a:hover{
+    animation: ease-in 0.1;
+    box-shadow: 3px 5px #00509d;
+}
+
+hr{
+    border-top: 2px dashed #00509d;
+}

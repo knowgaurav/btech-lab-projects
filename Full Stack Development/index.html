@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            $(".btn-1").click(function () {
+                $(".box").on(function () {
+                    $(this).css("background-color", "red"),
+                        $(this).slideUp(2000)
+                });
+            })
+        });
+    </script> -->
+</head>
+
+<body>
+    <button class="btn-1">Button 1</button>
+    <button class="btn-2">Button 2</button>
+    <button class="btn-3">Button 3</button>
+    <br><br>
+    <div class="box" style="position: relative; background-color: brown; height: 100px; width: 100px;"></div>
+
+    <script>
+        $(".btn-1").click(function () {
+            $(".box").css("background-color", "red");
+            $(".box").slideUp(1000);
+        });
+
+        $(".btn-2").on(
+            "click", function () {
+                $(".box").slideDown(1000)
+                $(".box").css("background-color", "brown");
+            });
+
+        $(".btn-3").click(function () {
+            $(this).animate({
+                opacity: 0.25,
+                left: "+=50"
+            });
+        });
+    </script>
+
+</body>
+
+</html>

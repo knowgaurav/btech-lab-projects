@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+    font-size: small;
+}
+
+.container{
+    background-color: rgb(238, 184, 184);
+    outline: 3px solid red;
+    width: 1000px;
+    margin: auto;
+}
+
+#item1{
+    float: left;
+    width: 48%;
+    margin: 10px 10px;
+    padding: 5px;
+    outline: 2px dashed black;
+}
+
+#item2{
+    float: left;
+    width: 48%;
+    margin: 10px 0;
+    padding: 5px;
+    outline: 2px dashed black;
+}
+
+#item3{
+    clear: left;
+    outline: 2px dashed black;
+}

@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Displaying JSON Data</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</head>
+
+<body>
+    <h1>FB JSON DATA</h1>
+    <div id="myData">Displaying</div>
+    <script>
+        var jQ = $.noConflict();
+        jQ(document).ready(function () {
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '287581063465366',
+                    autoLogAppEvents: true,
+                    xfbml: true,
+                    version: 'v12.0'
+                });
+                jQ(document).trigger('fbload');
+            };
+            console.log('hello');
+            // var staticURL='https://graph.facebook.com/v12.0/me?fields=id,name,posts{full_picture,message}&access_token=EAAEFja8hyZAYBAMMcSyiHmzfxhJDU07ZAgDIm1ohtgNMMJIvZB2iMM7YTnhPdZBMlPsZBeLfOTz9x9AXarlRippZA4DB7MD8ZABDYtM4ZAdUXLXIkVl5ZCaT0wZAxdV3oAe8bsJYTjKqa9JIgdBzM3H7eGe9KLAZA0KllkmSQyQ42vUXGeCMvpDVTUt'
+            // console.log("Outside of Function")
+            // $.getJSON(staticURL, function(data){
+            //     console.log("Inside of Function")
+            //     var mainContainer = document.getElementById("myData");
+            //     for(i=0;i<data.length;i=i+1){
+            //         console.log(data)
+            //         var div = document.createElement("div");
+            //         div.innerHTML = 'message: ' + data[i].message;
+            //         mainContainer.appendChild(div);
+            //     }
+            // });
+            jQ(document).on('fbload', function () {
+                FB.api('/me', 'GET', { "fields": "id,name,posts{full_picture,message}" }, function (response) {
+                    console.log(response);
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

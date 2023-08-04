@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="xmlstyles.css"?>
+
+<ss:student
+    xmlns:ss="./"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:SchemaLocation="./ student.xsd"
+>
+    <name>Gaurav Singh</name>
+    <semester>6IT</semester>
+    <section>2X</section>
+    <rollnum>9064</rollnum>
+    <body>3rd year undergrad</body>
+    <college>ASET</college>
+</ss:student>

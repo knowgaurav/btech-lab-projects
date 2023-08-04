@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>To-Do List App</h1>
+        </center>
+        <br>
+        <br>
+        <input type="text" name="task" placeholder="Add a task (Press enter to add)">
+        <br>
+        <hr>
+        <br>
+        <div class="notcompleted">
+            <h3>Not Completed</h3>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="completed">
+            <h3>Completed</h3>
+        </div>
+
+        <!-- <p></p>-->
+        <button>Click Me</button>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input").on("keyup", function (e) {
+                if (e.keyCode == 13 && $(this).val() != "") {
+                    var input = $(this).val();
+                    var task = $("<div class='task'></div>").text(input);
+
+                    var del = $("<i class='fas fa-trash-alt'></i>").click(function () {
+                        var p = $(this).parent();
+                        p.fadeOut(function () {
+                            p.remove();
+                        });
+                    });
+
+                    var check = $("<i class='fas fa-check'></i>").click(function () {
+                        var p = $(this).parent();
+                        p.fadeOut(function () {
+                            $(".completed").append(p);
+                            p.fadeIn();
+                        });
+                        $(this).remove();
+                    });
+
+                    task.append(del, check);
+                    $(".notcompleted").append(task);
+                    $(this).val("");
+                }
+            });
+
+            $('button').click(function () {
+                // $('p').html("Hello, ").css("color", "red").append(", World!");
+                $('title').fadeTo(0.5).text("Hello, world!");
+                // $(document).attr("title").slideUp("slow").text("New Title");
+
+            });
+        });
+    </script>
+</body>
+
+</html>

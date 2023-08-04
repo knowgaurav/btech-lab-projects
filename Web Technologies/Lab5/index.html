@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - 9/2/22</title>
+</head>
+
+<body>
+    <input type="text" name="input" id="input">
+    <button onclick="appendEle()">Append</button>
+    <button onclick="extractLast()">Extract Last</button>
+    <button onclick="prependEle()">Prepend</button>
+    <button onclick="extractFirst()">Extract First</button>
+    <h1 id="arr"></h1>
+
+    <h3 id="ele"></h3>
+
+    <script>
+        var arr = [];
+
+        function appendEle() {
+            var data = document.getElementById("input").value;
+            arr.push(data);
+            var op = "After Append, Arr = ";
+            for (let i = 0; i < arr.length; i++) {
+                op += arr[i];
+                op += ", "
+            }
+            document.getElementById("arr").innerHTML = op;
+        }
+
+        function extractLast() {
+            var op = arr[arr.length - 1];
+            if (op === undefined) {
+                document.getElementById("ele").innerHTML = "Cannot extract last element, Array is empty!";
+            }
+            else {
+                document.getElementById("ele").innerHTML = "Last element is = " + op;
+            }
+        }
+
+        function prependEle() {
+            var data = document.getElementById("input").value;
+            var new_arr = [data].concat(arr);
+            arr = new_arr;
+            var op = "After Prepend, Arr = ";
+            for (let i = 0; i < arr.length; i++) {
+                op += arr[i];
+                op += ", "
+            }
+            document.getElementById("arr").innerHTML = op;
+        }
+
+        function extractFirst() {
+            var op = arr[0];
+            if (op === undefined) {
+                document.getElementById("ele").innerHTML = "Cannot extract first element, Array is empty!";
+            }
+            else {
+                document.getElementById("ele").innerHTML = "First Element = " + op;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

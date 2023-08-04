@@ -1,0 +1,10 @@
+Insert into Student_PKL values('1002', 'Gaurav', 'G-142, Sector-46, Faridabad', '21 Jan 1980', '2023', '1234567890');
+update Student_PKL
+set Stud_ID = '1001'
+where Stud_Name = 'Gaurav'
+
+select * from Student_PKL
+
+select * from Student_PKL where stud_name = 'Gaurav'
+
+delete from Student_PKL where Stud_ID = '1005'

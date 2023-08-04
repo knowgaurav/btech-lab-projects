@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab 2 - 12/1/22</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        h3 {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript">
+        function sayHello() {
+            var name = document.getElementById('name').value;
+            alert("Hey, " + name + ". Amity University, Noida is a private research university located in Noida, India. The university is recognized by University Grants Commission and accredited by the NAAC with grade 'A+'.")
+        }
+    </script>
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1 style="color: #ffd500; font-size: 50px;">About Amity</h1>
+                </div>
+                <div class="content">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="button">
+                        <input type="text" name="name" id="name" placeholder="Enter your name: ">
+                        <input type="button" value="Read More" onclick="sayHello()">
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="https://www.amity.edu/backoffice/uploads/HomeBanner/1fblg_noida-cam-img.jpg"
+                    style="border: 10px solid #fff;" width="500px" height="250px">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

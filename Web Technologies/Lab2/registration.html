@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .button {
+            color: white;
+            background-color: black;
+            margin: 0 10px;
+            padding: 5px 10px;
+        }
+
+        input {
+            border: 0.5px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Registration Form</h1>
+        <form action="">
+            <table cellspacing=20px>
+                <tr>
+                    <td>Enter your Name: </td>
+                    <td><input type="text" placeholder="Tony Soprano"></td>
+                </tr>
+                <tr>
+                    <td>Enter your age: </td>
+                    <td><input type="number" maxlength="80" minlength="18" placeholder="18+"></td>
+                </tr>
+                <tr>
+                    <td>Enter your address: </td>
+                    <td><textarea rows=5 cols=22></textarea></td>
+                </tr>
+                <tr>
+                    <td>Select your gender: </td>
+                    <td>
+                        <input type="radio" name="gender" id="" value="male">Male
+                        <input type="radio" name="gender" id="" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Familiar<br>Programming<br>Langauges: </td>
+                    <td>
+                        <input type=checkbox name=c1 value=c>C<br>
+                        <input type=checkbox name=c2 value=c++>C++<br>
+                        <input type=checkbox name=c4 value=java>JAVA<br>
+                        <input type=checkbox name=c5 value=asp>ASP<br>
+                        <input type=checkbox name=c6 value=others>OTHERS<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter your password: </td>
+                    <td><input type="password" name="pass" id="" placeholder="$trong Pa$$word"></td>
+                </tr>
+            </table>
+            <div style="padding-top: 20px;">
+                <input class="button" type="reset">
+                <input class="button" type="submit">
+            </div>
+        </form>
+    </center>
+</body>
+
+</html>
