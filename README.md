@@ -139,10 +139,6 @@ Feel free to explore the projects, review the code, and delve into the detailed 
 
 Thank you for visiting my repository, and I hope my work inspires and contributes to the ever-evolving landscape of technology and innovation.
 
-_*Note: If you are planning to make the repository public, ensure that it adheres to any confidentiality or intellectual property guidelines set by your university or academic institution.*_
-
-Simplify the Analysis and Design of Algorithms description
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
